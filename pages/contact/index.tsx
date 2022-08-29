@@ -39,7 +39,7 @@ export const ContactScreen = () => {
     }
     return (
         <FormLayout title='Contacto'>
-            <Image src="/img/ibu-logo.jpg" alt="IBU" width={'500%'} height={'500%'} />
+            <Image src="https://res.cloudinary.com/nhf/image/upload/v1661804507/ibu/erh0j30n2rkda9k7xilx.jpg" alt="IBU" width={'500%'} height={'500%'} />
             <form onSubmit={ handleSubmit( onSubmit ) } noValidate>
                 <Box sx={{ width: 700, padding: '10px 20px' }}>
                     <Grid container spacing={2}>
