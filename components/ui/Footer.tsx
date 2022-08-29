@@ -40,7 +40,7 @@ export const Footer = () => {
                             <Box>
                                 <NextLink href={`/contact`} passHref>
                                     <Link color="inherit">
-                                        <Typography variant="body1" color="inherit" sx={{mt: 1}} > Escribenos </Typography>
+                                        <Typography variant="body1" color="inherit" sx={{mt: 1}} > Escríbenos </Typography>
                                     </Link>
                                 </NextLink>
                             </Box>
@@ -81,8 +81,10 @@ export const Footer = () => {
                             </Box>
                         </Grid> */}
                     </Grid>
-                        <Box textAlign="center" pt={{ xs: 5, sm: 10 }} pb={{ xs: 5, sm: 0 }} onClick={ contactANP } sx={{ cursor: 'pointer' }}>
-                            Powered By: ANP Software &copy; {new Date().getFullYear()}
+                        <Box textAlign="center" pt={{ xs: 5, sm: 5 }} pb={{ xs: 5, sm: 0 }} onClick={ contactANP } sx={{ cursor: 'pointer' }}>
+                            <Typography>Pueblito Peñuelas Local 13, La Serena, Chile</Typography>
+                            <Typography>Powered By: ANP Software &copy; {new Date().getFullYear()}</Typography>
+                            
                         </Box>
                 </Container>
             </Box>

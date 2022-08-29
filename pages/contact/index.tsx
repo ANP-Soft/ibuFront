@@ -27,6 +27,7 @@ export const ContactScreen = () => {
     const onSubmit = async (data: FormData) => {
         setIsSubmitting(true);
         const resp = await axios.post('/api/email', data);
+        // console.log(resp);
         if (resp.status === 200) {
             enqueueSnackbar('Mensaje enviado!', { variant: 'success' });
             reset();
