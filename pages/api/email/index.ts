@@ -26,11 +26,10 @@ const sendMail = async (req: NextApiRequest, res: NextApiResponse<Data>) => {
 
     const mg = mailgun({ apiKey: process.env.MAILGUN_API_KEY || '', domain: process.env.MAILGUN_DOMAIN || '' });
     const data = {
-        from: `IBU WebPage Notifications <noresponder@ibutienda.cl>`,
-        to: `nicolas.huerta@usach.cl`,
+        from: `${ process.env.MAILGUN_FROM_NAME || '' } <${ process.env.MAILGUN_FROM_EMAIL || '' }>`,
+        to: `${ process.env.MAILGUN_CONTACT_EMAIL || '' }`,
         subject: `Contacto desde formulario web`,
         text: `${firstName} ${lastName} (${email}) ha enviado un mensaje desde la web: ${message}`,
-        
     };
 
     mg.messages().send(data, (error, body) => {
